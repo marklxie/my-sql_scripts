@@ -37,3 +37,19 @@ left join major as m on m.Id = s.MajorId
 
 select c.*, (i.Firstname + ' ' + i.Lastname) as 'Instructor Name' from Class as c
 left join Instructor as i on i.Id = c.InstructorId
+
+select * from student as s
+where s.SAT < (select avg(sat) from student)
+
+declare @maxsat int;
+set @maxsat = 1100;
+
+select * 
+	from student where sat > @maxsat
+	order by sat desc
+
+declare @lowsat int = 1000;
+declare @highsat int = 1200;
+
+select * from student
+where sat >= @lowsat and sat <= @highsat;

@@ -12,7 +12,8 @@ join orders o on c.id = o.customerid
 join orderlines ol on o.id = ol.ordersid
 order by Date
 
-select sum(sales)/count(city) from Customers
+select city , (sum(sales)/count(city)) 'average sales' from Customers
+group by City
 
 
 /*select * from orders
