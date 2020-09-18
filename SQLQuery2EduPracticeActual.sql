@@ -53,3 +53,35 @@ declare @highsat int = 1200;
 
 select * from student
 where sat >= @lowsat and sat <= @highsat;
+
+/*Insert Student (id,Firstname, Lastname, SAT, GPA, MajorId) values
+	(45,'joe', 'smith', 1450, 3.75, 4)
+	*/
+
+
+/*update Student set
+	Firstname = 'Joseph'
+	where id in (45)
+
+	select * from student
+
+update Student set
+	SAT = 950, GPA = 2.2
+	where id = 140
+select * from student*/
+
+/*update student set
+	gpa = gpa + 0.1
+	where sat between 1000 and 1300
+
+	select * from student*/
+	select * from major
+
+update student set
+	MajorId = 2
+	where Firstname = 'Greg' and Lastname = 
+
+select * from student
+
+delete from student
+	where Student.Firstname = 'Joe'
